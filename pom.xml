@@ -50,3 +50,89 @@
 		</plugins>
 	</build>
 </project>
+
+
+ADAUTHENTICATION
+1. 1. METHODS
+URL: https://uatweb.sampath.lk/webservicesRest/api/adauthentication/v1/authentication
+Method Name: ADAuthentication
+Request
+• Headers
+▪ ServiceName:ADAuthentication
+▪ TokenID:0
+▪ Content-Type:application/json
+• Basic Auth (as Authorization Header in base64 encode string)
+▪ Username: username (refer email)
+▪ Password: password (refer email)
+• Body
+{
+"AdUserName": "chalanid",
+"AdUserPassword": "abc@1234",
+"AppCode": "SMD",
+"RequestTime": "2026-07-15 14:01:00"
+}
+• Content Type: JSON
+• Request Method: POST
+Note:
+• RequestTime should be in IST.
+CLASSIFICATION: EXTERNAL CONFIDENTIAL
+VERSION 26.07.15.1
+2 | P a g e
+Response
+{
+"Response": true,
+"UserID": "030457",
+"UserClass": "30",
+"UPMData": {
+"SUP_ID": "30457",
+"FIRST_NAME": "C",
+"LAST_NAME": "DE SILVA",
+"DESIGNATION_CODE": "SAI",
+"DESIGNATION_DESC": "Junior Executive II",
+"SECURITY_CLASS": "10",
+"WORK_CLASS_BOT": "111",
+"AD_USER_ID": "AA",
+"SIGNATURE_ID": "B2301",
+"OFFICER_STATUS": "A",
+"DA_LEVEL_BOT": "AA",
+"DA_AMOUNT_BOT": "0",
+"MOBILE_PHONE": null,
+"EMAIL": "chalanid@sampath.lk",
+"SOL_ID": "922",
+"DIV_CODE": "922",
+"BOT_STATUS": "V",
+"APPLICATION_SECURITY_CLASS": "30",
+"WORK_CLASS_OAT": "30",
+"EXPIRY_DATE": "31/12/3999 00:00:00",
+"DA_LEVEL_OAT": "AA",
+"DA_AMOUNT_OAT": "0",
+"SIGN_ON_STATUS": "N",
+"ACTIVE_STATUS": "A",
+"FUNCTION_CODE1": "S0003",
+"FUNCTION_CODE2": "SS0005",
+"FUNCTION_CODE3": null,
+"OAT_STATUS": "V",
+"SOL_NAME": "International Department"
+},
+"Code": 0,
+"SubCode": 0,
+"Message": null,
+"MessageQueue": null,
+"MessageCustomer": null,
+"RequestID":
+"005056AA21FE.20260715140211.605ad0ce34f34364a688fbf7afccf35f.finaccessportal"
+}
+CLASSIFICATION: EXTERNAL CONFIDENTIAL
+VERSION 26.07.15.1
+3 | P a g e
+2. ERROR CODES
+Code SubCode Message
+88 4 Invalid Service Name
+88 5 Long Time Span
+88 6 Invalid parameters
+0 0 Success
+99 1 Web service error
+3. SPECIAL NOTE
+• Each method may contain its own (ServiceName, TokenID, Username, Password, URL) and can separate
+values in test and live environments. Therefore, include them in an encrypted config file.
+• The requestid field in the response can be used to trace the logs in the Web service server whenever required
