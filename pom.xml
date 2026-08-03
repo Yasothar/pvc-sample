@@ -50,3 +50,9 @@
 		</plugins>
 	</build>
 </project>
+
+
+ServiceName: ADAuthentication
+Username: finaccessportal
+Password: +GNuxZ2o4PvbCvw8ra2WDZ1XqY4yEYzFu3Ar/hd5CWfQSAqaZ04m5iqFLVxO9Y7tMenE7zpOy7WX+1YCgSHaIOerY80gTs87EqXZEyhG3EPYuAdVO3INSr2eWlsiO/UQ
+URL: http://192.125.125.154/webservicesRest/api/adauthentication/v1/authentication
